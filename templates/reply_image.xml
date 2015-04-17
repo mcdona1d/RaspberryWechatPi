@@ -1,0 +1,10 @@
+$def with (toUser,fromUser,createTime,mediaId)
+<xml>
+        <ToUserName><![CDATA[$toUser]]></ToUserName>
+        <FromUserName><![CDATA[$fromUser]]></FromUserName>
+        <CreateTime>$createTime</CreateTime>
+        <MsgType><![CDATA[image]]></MsgType>
+        <Image>
+                <MediaId><![CDATA[$mediaId]]></MediaId>
+        </Image>
+</xml>
