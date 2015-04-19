@@ -308,7 +308,7 @@ def _auto_control_light():
             print("THE LED IS OFF NOW")
             GPIO.setup(LIGHTPORT,GPIO.HIGH)
             for uid in id_list:
-                content = '{"touser":"%s", "msgtype":"text", "text":{ "content":"灯光已自动关闭"}}' %uid
+                content = '{"touser":"%s", "msgtype":"text", "text":{ "content":"The light already close"}}' %uid
                 try:
                     print wc.message.custom.send.post(body=content)
                 except APIError, e:
@@ -317,7 +317,7 @@ def _auto_control_light():
             print("THE LED IS ON NOW")
             GPIO.setup(LIGHTPORT,GPIO.LOW)
             for uid in id_list:
-                content = '{"touser":"%s", "msgtype":"text", "text":{ "content":"灯光已自动开启"}}' %uid
+                content = '{"touser":"%s", "msgtype":"text", "text":{ "content":"The light already open"}}' %uid
                 try:
                     print wc.message.custom.send.post(body=content)
                 except APIError, e:
@@ -349,7 +349,7 @@ def _auto_control_body():
         if(inputValue!=0):
             #发送报警文字
             for uid in id_list:
-                content = '{"touser":"%s", "msgtype":"text", "text":{ "content":"警告！检测到有人闯入！！"}}' %uid
+                content = '{"touser":"%s", "msgtype":"text", "text":{ "content":"Waring! Somebody in your Room"}}' %uid
                 #print 可以看有没有发送成功, 可以捕获api错误异常
                 try:
                     print wc.message.custom.send.post(body=content)
@@ -405,7 +405,7 @@ class WeixinInterface:
         req = urllib2.Request(url)
         try:
             resp = urllib2.urlopen(req, timeout = 2)
-            print self.yee.image.upload('15875', '27360', fd = resp)
+            print self.yee.image.upload('12345', '27360', fd = resp) #12345替换为自己的yeelink设备的id
         except urllib2.HTTPError, e:
             print e
             return self._reply_text(fromUser, toUser, u'上传图片失败！')
