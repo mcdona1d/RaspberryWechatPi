@@ -1,6 +1,8 @@
 # wechatpi
 WeChat public platform Based on a Raspberry Pi
-完整版本在 http://blog.csdn.net/u010027419
+
+完整版本在 http://blog.csdn.net/u010027419/article/details/45129787
+
 ## 需要用到的所有硬件
 * 路由器
 * 树莓派主板
@@ -19,12 +21,14 @@ WeChat public platform Based on a Raspberry Pi
 * GPIO连接线若干
 
 ## 需要安装的所有软件
-###Windows端
+
+### Windows端
 * Putty（0.63）
 * WinSCP（5.1.7）
 * Win32DiskImager（0.9.5）
 * Notepad++
-###Raspberry Pi端
+
+### Raspberry Pi端
 * RASPBIAN 系统
 >* 下载链接：https://www.raspberrypi.org/downloads/
 
@@ -46,25 +50,26 @@ WeChat public platform Based on a Raspberry Pi
 ## 配置过程
 
 ### 初始化树莓派
-使用Putty登陆树莓派
+
+####使用Putty登陆树莓派
 Username：pi
 Password：raspberry
+
 #### 获取root权限
  ` sudo passwd root `
 （需要输入两次你想设置的root密码）
  ` sudo passwd --unlock root`
  设置完成后重启Putty，以root身份登陆
+
 ####释放空间及设置时区
 以root身份登录后会自动弹出raspi-config设置工具，也可直接输入`raspi-config`调出
 1. 执行第一项，一直选择ok即可
 2. 选择第四项，然后选择第二项，进入时区设置
 3. 分别选择Asia——Shanghai，确定，即可改为+8时区
 
-
-
 #### 设置静态ip
-  ` sudo nano /etc/network/interfaces`
-  把这一行 
+` sudo nano /etc/network/interfaces`
+把这一行 
 `iface eth0 inet dhcp `
 替换为 
 `iface eth0 inet static 
@@ -98,11 +103,13 @@ Ps2：国内的几个软件源
 >重庆大学源（中西部用户） 
 >http://mirrors.cqu.edu.cn/Raspbian/raspbian/
 
-* **更新缓存并升级软件**
+#### 更新缓存并升级软件
 `sudo apt-get update && apt-get upgrade`
+
 ###安装及配置
 安装所需要的所有软件，将必须的软件包安装完毕，并且调试成功
 调试过程如果有问题可以参见本博客（附录）中的其他文章，或欢迎留言讨论
+
 ####安装软件
 * webpy
 >``` git clone git://github.com/webpy/webpy.git
@@ -132,7 +139,9 @@ Ps2：国内的几个软件源
 >`sudo apt-get install libv4l-dev`
 >`sudo apt-get install libjpeg8-dev`
 >`sudo apt-get install imagemagick`
+
 （编译安装mjpg-steamer）
+
 >`wget http://sourceforge.net/code-snapshots/svn/m/mj/mjpg-streamer/code/mjpg-streamer-code-182.zip`
 >`unzip mjpg-streamer-code-182.zip`
 >`cd mjpg-streamer-code-182/mjpg-streamer`
