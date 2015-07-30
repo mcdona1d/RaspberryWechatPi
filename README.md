@@ -1,7 +1,7 @@
 # wechatpi
 WeChat public platform Based on a Raspberry Pi
 
-完整版本在 http://blog.csdn.net/u010027419/article/details/45129787
+完整版本在 http://mcdona1d.me/%E8%B7%91%E5%9C%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8A%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%E9%9B%8F%E5%BD%A2.html
 
 ## 需要用到的所有硬件
 * 路由器
