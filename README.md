@@ -1,7 +1,7 @@
 # RaspberryWechatPi
 WeChat public platform Based on a Raspberry Pi
 
-> 完整版本在 http://mcdona1d.me/%E8%B7%91%E5%9C%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8A%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%E9%9B%8F%E5%BD%A2.html
+> 完整版本在 https://mcdona1d.me/2015/05/06/pao-zai-shu-mei-pai-shang-zhi-neng-jia-ju-chu-xing/
 
 
 ## 简介
